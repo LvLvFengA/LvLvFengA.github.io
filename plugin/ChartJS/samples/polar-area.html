@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>极区图</title>
+    <script src="../dist/Chart.bundle.js"></script>
+    <script src="../jquery-3.1.1.min.js"></script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="canvas-holder" style="width:75%">
+        <canvas id="chart-area"></canvas>
+    </div>
+    <button id="randomizeData">随机数据</button>
+    <button id="addData">添加数据</button>
+    <button id="removeData">移除数据</button>
+    <script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+    var randomColorFactor = function() {
+        return Math.round(Math.random() * 255);
+    };
+    var randomColor = function(opacity) {
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+    };
+
+    var config = {
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    "#F7464A",
+                    "#46BFBD",
+                    "#FDB45C",
+                    "#949FB1",
+                    "#4D5360",
+                ],
+                label: '我的数据集' // for legend
+            }],
+            labels: [
+                "红",
+                "绿",
+                "黄",
+                "灰",
+                "深灰"
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js 极区图'
+            },
+            scale: {
+              ticks: {
+                beginAtZero: true
+              },
+              reverse: false
+            },
+            animation: {
+                animateRotate: false
+            }
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area");
+        window.myPolarArea = Chart.PolarArea(ctx, config);
+    };
+
+    $('#randomizeData').click(function() {
+        $.each(config.data.datasets, function(i, piece) {
+            $.each(piece.data, function(j, value) {
+                config.data.datasets[i].data[j] = randomScalingFactor();
+                config.data.datasets[i].backgroundColor[j] = randomColor();
+            });
+        });
+        window.myPolarArea.update();
+    });
+
+    $('#addData').click(function() {
+        if (config.data.datasets.length > 0) {
+            config.data.labels.push('数据 #' + config.data.labels.length);
+
+            $.each(config.data.datasets, function(i, dataset) {
+                dataset.backgroundColor.push(randomColor());
+                dataset.data.push(randomScalingFactor());
+            });
+
+            window.myPolarArea.update();
+        }
+    });
+
+    $('#removeData').click(function() {
+        config.data.labels.pop(); // remove the label first
+
+        $.each(config.data.datasets, function(i, dataset) {
+            dataset.backgroundColor.pop();
+            dataset.data.pop();
+        });
+
+        window.myPolarArea.update();
+    });
+    </script>
+</body>
+
+</html>

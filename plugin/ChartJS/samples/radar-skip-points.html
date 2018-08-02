@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>雷达图</title>
+    <script src="../dist/Chart.bundle.js"></script>
+    <script src="../jquery-3.1.1.min.js"></script>    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="width:75%">
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="randomizeData">随机数据</button>
+    <button id="addDataset">添加数据集</button>
+    <button id="removeDataset">移除数据集</button>
+    <button id="addData">添加数据</button>
+    <button id="removeData">移除数据</button>
+    <script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+    var randomColorFactor = function() {
+        return Math.round(Math.random() * 255);
+    };
+    var randomColor = function(opacity) {
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+    };
+
+    var config = {
+        type: 'radar',
+        data: {
+            labels: ["吃", "喝", "睡", "设计", "编码", "骑车", "跑步"],
+            datasets: [{
+                label: "跳过第一个数据集",
+                borderColor: 'rgb(255, 0, 0)',
+                backgroundColor: "rgba(255,255,0,0.5)",
+                pointBackgroundColor: "rgba(220,220,220,1)",
+                data: [NaN, randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            }, {
+                label: "跳过中间数据集",
+                borderColor: 'rgb(255, 0, 255)',
+                backgroundColor: "rgba(0, 255, 0, 0.5)",
+                pointBackgroundColor: "rgba(151,187,205,1)",
+                hoverPointBackgroundColor: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [randomScalingFactor(), randomScalingFactor(), NaN, randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+            },{
+                label: "跳过最后一个数据集",
+                borderColor: 'rgb(0, 255, 255)',
+                backgroundColor: "rgba(0, 0, 255, 0.5)",
+                pointBackgroundColor: "rgba(151,187,205,1)",
+                hoverPointBackgroundColor: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), NaN]
+            }]
+        },
+        options: {
+            title:{
+                display:true,
+                text:"Chart.js 雷达图-跳跃点"
+            },
+            elements: {
+                line: {
+                    tension: 0.0,
+                }
+            },
+            scale: {
+                beginAtZero: true,
+                reverse: false
+            }
+        }
+    };
+
+    window.onload = function() {
+        window.myRadar = new Chart(document.getElementById("canvas"), config);
+    };
+
+    $('#randomizeData').click(function() {
+        $.each(config.data.datasets, function(i, dataset) {
+            dataset.data = dataset.data.map(function() {
+                return randomScalingFactor();
+            });
+
+        });
+
+        window.myRadar.update();
+    });
+
+    $('#addDataset').click(function() {
+        var newDataset = {
+            label: '数据 ' + config.data.datasets.length,
+            borderColor: randomColor(0.4),
+            backgroundColor: randomColor(0.5),
+            pointBorderColor: randomColor(0.7),
+            pointBackgroundColor: randomColor(0.5),
+            pointBorderWidth: 1,
+            data: [],
+        };
+
+        for (var index = 0; index < config.data.labels.length; ++index) {
+            newDataset.data.push(randomScalingFactor());
+        }
+
+        config.data.datasets.push(newDataset);
+        window.myRadar.update();
+    });
+
+    $('#addData').click(function() {
+        if (config.data.datasets.length > 0) {
+            config.data.labels.push('数据集 #' + config.data.labels.length);
+
+            $.each(config.data.datasets, function (i, dataset) {
+                dataset.data.push(randomScalingFactor());
+            });
+
+            window.myRadar.update();
+        }
+    });
+
+    $('#removeDataset').click(function() {
+        config.data.datasets.splice(0, 1);
+        window.myRadar.update();
+    });
+
+    $('#removeData').click(function() {
+        config.data.labels.pop(); // remove the label first
+
+        $.each(config.data.datasets, function(i, dataset) {
+            dataset.data.pop();
+        });
+
+        window.myRadar.update();
+    });
+    </script>
+</body>
+
+</html>

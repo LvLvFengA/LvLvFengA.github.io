@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>LayUI</title>
+
+<!--版本：-v2.3.0-->
+
+	<!--导入主样式-->
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<!--导入JS库-->
+	<script src="../layui/layui.js"></script>
+	<!--全部加载，但是效率低-->
+	<!-- <script src="../layui/layui.all.js"></script> -->
+</head>
+<body>
+<a href="module_load.html" title="">模块化加载</a><br/><br/>
+<!--0001.布局示例-->
+<h3>布局示例</h3>
+<div class="layui-main" style="background: #ccc">
+	类：layui-main 这是一个水平居中不带响应式的宽度为1140居中div块儿
+	<div class="layui-inline" style="background: #99F">
+		类：layui-inline 将标签设为内联块状元素
+	</div>
+	<div class="layui-box">
+		类：layui-box就是干掉其他框架，强制将全部元素设为box-sizing: border-box所引发的尺寸偏差
+	</div>
+	<div class="layui-clear">
+		类：layui-clear 清除浮动，貌似没啥用
+	</div>
+	<div class="layui-btn-container">
+		类：layui-btn-container 按钮的父级容器 2.2.5新增
+	</div>
+	<div class="layui-btn-fluid">
+		类： layui-btn-fluid 用于定义流体按钮。即宽度最大化适应 2.2.2.5新增
+	</div>
+	<div class="layui-elip" style="width: 200px">
+		类：layui-elip 超出隐藏 如下<br/>
+		省略句：苍茫的天涯是我的爱，绵绵的青山脚下花正开，什么样的节奏是最呀最摇摆
+	</div>
+	<div class="layui-unselect">
+		类：layui-unselect 不允许你复制<br/>
+		不要懒不要懒，手打吧，复制不了的亲~
+	</div>
+	<div>
+		类：layui-disabled 禁用元素，比如按钮<br/>
+		<button type="button" class="layui-disabled layui-btn layui-btn-success">不兴点！</button>
+	</div>
+	<div class="layui-circle" style="background: #f96;height: 200px;width: 200px" align="center">
+		类：layui-circle 设置元素是圆形的~<br/>
+		类：layui-show  显示块级元素<br/>
+		类：layui-hide  隐藏块级元素
+	</div>
+	<div class="layui-text">
+		类：layui-text  <a href="#" title="">定义文本区域</a>
+		<div class="layui-word-aux">
+			类：layui-word-aux  灰色标记文字
+		</div>
+	</div>
+	<div class="layui-bg-black">
+		背景色：
+		layui-bg-red	用于设置元素赤色背景<br/>
+		layui-bg-orange	用于设置元素橙色背景<br/>
+		layui-bg-green	用于设置元素墨绿色背景（主色调）<br/>
+		layui-bg-cyan	用于设置元素藏青色背景<br/>
+		layui-bg-blue	用于设置元素蓝色背景<br/>
+		layui-bg-black	用于设置元素经典黑色背景<br/>
+		layui-bg-gray	用于设置元素经典灰色背景<br/>
+	</div><br/><br/><br/>
+	<h1>主要：</h1>
+	<a href="grid_system.html" class="layui-btn layui-btn-success"><h3>栅格系统</h3></a>
+	<a href="button_style.html" class="layui-btn layui-btn-danger"><h3>按钮示例</h3></a>
+	<a href="form_example.html" class="layui-btn layui-btn-success"><h3>表单</h3></a>
+	<a href="nav.html" class="layui-btn layui-btn-danger"><h3>导航栏</h3></a>
+	<a href="tab.html" class="layui-btn layui-btn-success"><h3>tab标题栏</h3></a>
+	<a href="progress_bar.html" class="layui-btn layui-btn-danger"><h3>进度条</h3></a>
+	<a href="panel.html" class="layui-btn layui-btn-success"><h3>面板</h3></a>
+	<a href="badge.html" class="layui-btn layui-btn-danger"><h3>徽章</h3></a><br/><br/>
+
+	<a href="time_line.html" class="layui-btn layui-btn-danger"><h3>时间线</h3></a>
+	<a href="table.html" class="layui-btn layui-btn-success"><h3>表格</h3></a>
+	<a href="animate.html" class="layui-btn layui-btn-danger"><h3>动画</h3></a><br/><br/>
+
+	<h2>下面是一些组件的增强版：当然，内置也有，组件更全！</h2>
+	<a href="panel.html" class="layui-btn layui-btn-success"><h3>面板</h3></a>
+	<a href="panel.html" class="layui-btn layui-btn-danger"><h3>面板</h3></a>
+	<a href="panel.html" class="layui-btn layui-btn-success"><h3>面板</h3></a>
+	<br/><br/><br/><br/>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+//模块化加载方案，利于效率优化；注意
+layui.use(
+	['layer','form'],
+	function(){
+		//这里就是一大堆代码应该存在的地方……
+		var layer = layui.layer,	//声明模块
+		form = layui.form;
+		layer.msg("她静悄悄的来过~");	//一个可爱萌萌哒小模态框
+	}
+);
+</script>
+</body>
+</html>

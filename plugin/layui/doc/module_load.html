@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>模块化加载举例</title>
+	<!--导入主样式-->
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<!--导入JS库-->
+	<script src="../layui/layui.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+//自定义配置
+layui.config({
+	base: 'dependence/'	//存放新模块的目录，是你的工作模块
+}).use('index');	//index是加载入口，在依赖文件的最后一行
+</script>
+</body>
+</html>
