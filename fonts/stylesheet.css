@@ -1,0 +1,41 @@
+/*use font example:  @import url("fonts/stylesheet.css");*/
+@font-face {
+	font-family: 'c3';
+	src: url('c3.ttf') format('truetype');
+	}
+@font-face{
+	font-family: 'c2';
+	src: url('c2.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'c1';
+	src: url('c1.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'c4';
+	src: url('c4.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'c5';
+	src: url('c5.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'e1';
+	src: url('e1.TTF') format('truetype');
+}
+@font-face{
+	font-family: 'e2';
+	src: url('e2.TTF') format('truetype');
+}
+@font-face{
+	font-family: 'e3';
+	src: url('e3.TTF') format('truetype');
+}
+@font-face{
+	font-family: 'e4';
+	src: url('e4.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'e5';
+	src: url('e5.ttf') format('truetype');
+}
