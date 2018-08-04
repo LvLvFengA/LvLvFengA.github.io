@@ -1,0 +1,8 @@
+/*自定义主题包*/
+body .ext-lvfeng .layui-layer-title{
+	text-shadow: 5px 5px 5px #ff0000;		/*文本阴影*/
+}
+body .ext-lvfeng .layui-layer-btn{
+	color: #ff0000;
+}
+body .ext-lvfeng .layui-layer-btn a{}

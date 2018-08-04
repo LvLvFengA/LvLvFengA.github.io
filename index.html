@@ -5,19 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<!-- 资源加载务必采用国内cdn，不托管在github -->
+<!-- bootstrap图标库class名：http://w3c.3306.biz/bootstrap_glyphicons/show-31-95-1.html -->
 <!-- css files -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<!-- <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
 <!-- <link href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" /> -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- /css files -->
-<link href='http://cdn.webfont.youziku.com/webfonts/nomal/121539/45803/5b62ace9f629d80db4bc7ce3.css' rel='stylesheet' type='text/css' />
-<!-- font files -->
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- /font files -->
 <!-- js files -->
 <script src="js/modernizr.custom.js"></script>
 <!-- /js files -->
@@ -29,6 +22,12 @@ ul{
 }
 .navbar-brand{
 	font-family: c2;
+}
+.about-us{
+	background-color: #ecffff;
+}
+.our-gallery{
+	background-color: #dcb5ff;
 }
 </style>
 </head>
@@ -48,13 +47,13 @@ ul{
 				</div>
 				<div id="navbar" class="navbar-collapse collapse navbar-right">
 					<ul class="nav navbar-nav">
-						<li><a href="#"><span data-hover="主页">主页</span></a></li>
-						<li><a href="#about"><span data-hover="关于……">关于……</span></a></li>
+						<li><a href="#" id="first"><span data-hover="主页">主页</span></a></li>
+						<li><a href="#about"><span data-hover="关于…">关于…</span></a></li>
 						<li><a href="#service"><span data-hover="空间">空间</span></a></li>
 						<li><a href="#events"><span data-hover="随笔">随笔</span></a></li>
-						<li><a href="#gallery"><span data-hover="博客">博客</span></a></li>
-						<li><a href="#testimonials"><span data-hover="相册">相册</span></a></li>
-						<li><a href="#contact"><span data-hover="一些好玩的">一些好玩的</span></a></li>
+						<li><a href="#gallery"><span data-hover="相册">相册</span></a></li>
+						<li><a href="#testimonials"><span data-hover="有意思">有意思</span></a></li>
+						<li><a href="#contact"><span data-hover="没事扯扯">没事扯扯</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -95,7 +94,7 @@ ul{
 <!-- About Section -->
 <section class="about-us" id="about">
 	<h3 class="text-center slideanim">关于绿绿峰</h3>
-	<p class="text-center slideanim">绿绿峰来自辽宁，javaweb代码者是也。日常无事喜欢写码，文章，音乐，单车，旅行等等等。先来无事写写博客，学个习，get点小技能~嗯，这果然是真的我也。</p>
+	<p class="text-center slideanim">绿绿峰来自辽宁，javaweb代码者是也。闲来无事写写博客，学个习，get点小技能~嗯，这果然是真的我也。</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -103,9 +102,10 @@ ul{
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<div class="about-info">
-					<h4 class="slideanim">We're The Best</h4>
-					<p class="abt slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<p class="abt slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					<h4 class="slideanim"><span class="glyphicon glyphicon-user"></span>&nbsp;叫俺啊峰哥——其实是emmm于云峰</h4>
+					<p class="abt slideanim">喜欢的事啊，很多非常多。热爱生活是跟人学的，喜欢&nbsp;<span class="glyphicon glyphicon-camera"></span>&nbsp;emmm，手机，写文章，茶，&nbsp;<span class="glyphicon glyphicon-music"></span>&nbsp;；偶尔非常不熟练的弹吉他自娱自乐，录首歌用FL搞个怪~</p>
+					<p class="abt slideanim">喜欢单车，旅行，徒步，登山，钓鱼；这些独自出去嗨，路上遇到很多人，就会尝试着沟通，唠嗑呗。遇到一个能扯上一路。</p>
+					<p class="abt slideanim">没事的时候比较适合写写代码，刷刷博客，看看有啥新鲜事儿~</p>
 				</div>
 			</div>
 		</div>
@@ -114,8 +114,8 @@ ul{
 <!-- /About Section -->
 <!-- Services Section -->
 <section class="our-services slideanim" id="service">
-	<h3 class="text-center slideanim">Our Services</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">空间么？</h3>
+	<p class="text-center slideanim">至少，QQ的还是有的,<a href="https://user.qzone.qq.com/2402241449" title="QQ空间" target="_blank">戳这里</a></p>
 	<div id="features">
 		<div class="container">
 			<div class="row">
@@ -124,41 +124,34 @@ ul{
 					<div class="accordion ac" id="accordion2">
 						<div class="accordion-group">
 							<div class="accordion-heading">
-								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">First Class Design</a>
+								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">GitHub可以有</a>
 							</div><!-- /accordion-heading -->
 							<div id="collapseOne" class="accordion-body collapse in">
 								<div class="accordion-inner slideanim">
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+									<p>偶尔知道有这么个网站，可以save code and share（绝对的汉氏英语），挺好挺好。虽然没啥玩意儿，闲来无事者可戳进去看看~</p>
+									<a href="https://github.com/LvLvFengA" class="btn btn-success" target="_blank">My GitHub</a>
 								</div><!-- /accordion-inner -->
 							</div><!-- /collapse -->
 						</div><!-- /accordion-group -->
 						<div class="accordion-group">
 							<div class="accordion-heading">
-								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Retina Ready Theme</a>
+								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">CSDN也可以有</a>
 							</div>
 							<div id="collapseTwo" class="accordion-body collapse">
 								<div class="accordion-inner slideanim">
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+									<p>全当是记笔记的地儿，可以云存储，酷毙了。这高级的世界里难道还有用U盘的程序员么？？</p>
+									<a href="https://blog.csdn.net/qq_37525899/" class="btn btn-info" target="_blank">My CSDN</a>
 								</div><!-- /accordion-inner -->
 							</div><!-- /collapse -->
 						</div><!-- /accordion-group -->
 						<div class="accordion-group">
 							<div class="accordion-heading">
-								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">Awesome Support</a>
+								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">掘金网</a>
 							</div>
 							<div id="collapseThree" class="accordion-body collapse">
 								<div class="accordion-inner slideanim">
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div><!-- /accordion-inner -->
-							</div><!-- /collapse -->
-						</div><!-- /accordion-group -->
-						<div class="accordion-group">
-							<div class="accordion-heading">
-								<a class="accordion-toggle slideanim" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">Responsive Design</a>
-							</div>
-							<div id="collapseFour" class="accordion-body collapse">
-								<div class="accordion-inner slideanim">
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+									<p>这个真没有，新出的一个论坛，很多coding猿推荐，遂注册刷刷博客挺好~算是真心推荐。</p>
+									<a href="https://juejin.im/timeline" class="btn btn-warning" target="_blank">掘金网</a>
 								</div><!-- /accordion-inner -->
 							</div><!-- /collapse -->
 						</div><!-- /accordion-group -->
@@ -174,72 +167,64 @@ ul{
 <!-- /Services Section -->
 <!-- Events -->
 <section class="our-events slideanim" id="events">
-	<h3 class="text-center slideanim">Our Events</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">指的是博客吧</h3>
+	<p class="text-center slideanim">为了凑个数，就写点吧。就在GitHub本站。</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 24th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">博客首页</h4>
+					<p class="eve slideanim">详细分类，戳进去看看就知道了~<br/>有个人技术分享，日常闲谈，还有一些文章啥的，总之，你可以，嗯。<br/><br/>
+						<a href="lvfeng/blog/blog_index.html" class="btn btn-success">博客首页</a>
+					</p>
+
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 26th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">技术谈谈</h4>
+					<p class="eve slideanim">据说前端的bootstrap挺火，用的响应式布局，啧啧手机电脑用一个页面。就包括本页面就是基于bootstrap的。还有啥jQuery，不多说，这么火的。后端的spring boot，还有spring cloud，分体式应用，0配置，省时省力又省心……<br/><br/>
+					<a href="lvfeng/blog/technology/te_blog_index.html" class="btn btn-info">技术博客</a>
+					</p>
 				</div>
 			</div>	
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 28th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">生活扯扯</h4>
+					<p class="eve slideanim">来讲一些小技能，比如电脑使用，软件，修图，拍照，烹饪等等等生活小技能，多一点知识终究是好滴！来一起get吧~！<br/><br/>
+					<a href="lvfeng/blog/life/li_blog_index.html" class="btn btn-warning">生活记录</a>
+					</p>
 				</div>
 			</div>	
 		</div>
 	</div>
 </section>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
 <!-- /Events -->
 <!-- Gallery Section -->
 <section class="our-gallery" id="gallery">
-	<h3 class="text-center slideanim">Our Gallery</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">相册</h3>
+	<p class="text-center slideanim">算是一种记录生活的方式，能够具象的表达和感受，多好啊！</p>
 	<div class="container">
-		<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-        <img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img3.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img4.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img5.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img6.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="http://b342.photo.store.qq.com/psb?/V12bJ0UM1EN1IB/YO7CWeK.ui75RNOVHRwLOGKszdkTb.XnEM9XHGRLqWk!/m/dFYBAAAAAAAAnull&bo=MgY4BEgU0A0RCbc!&rf=photolist&t=5" data-darkbox="http://b342.photo.store.qq.com/psb?/V12bJ0UM1EN1IB/YO7CWeK.ui75RNOVHRwLOGKszdkTb.XnEM9XHGRLqWk!/b/dFYBAAAAAAAA&bo=MgY4BEgU0A0RCbc!&rf=viewer_4&t=5" data-darkbox-description="<b>@小草</b><br>城南花已开" class="img-responsive slideanim">
+        <img src="http://b321.photo.store.qq.com/psb?/V12bJ0UM1EN1IB/zO5zMPMWYcNnwpq9FrGgLO02Uoa7lIWXIgzSCUrwcpE!/m/dEEBAAAAAAAAnull&bo=OARUBhAPmBYRCcE!&rf=photolist&t=5" data-darkbox="http://b321.photo.store.qq.com/psb?/V12bJ0UM1EN1IB/zO5zMPMWYcNnwpq9FrGgLO02Uoa7lIWXIgzSCUrwcpE!/b/dEEBAAAAAAAA&bo=OARUBhAPmBYRGdE!&rf=viewer_4&t=5" data-darkbox-description="<b>@小草</b><br>城南花已开" class="img-responsive slideanim">
+		<img src="http://b306.photo.store.qq.com/psb?/V12bJ0UM38AxIh/arNSD4RBwo9jkuCGgMWe1NyQWead5xsh3Mv5qbNy4TU!/m/dDIBAAAAAAAAnull&bo=UAcABVAHAAURBzA!&rf=photolist&t=5" data-darkbox="http://b306.photo.store.qq.com/psb?/V12bJ0UM38AxIh/arNSD4RBwo9jkuCGgMWe1NyQWead5xsh3Mv5qbNy4TU!/b/dDIBAAAAAAAA&bo=UAcABVAHAAURBzA!&rf=viewer_4&t=5" data-darkbox-description="<b>@小草</b><br>一片叶子的故事" class="img-responsive slideanim">
+		<img src="http://b307.photo.store.qq.com/psb?/V12bJ0UM38AxIh/Iki6kk8DWosa2ilBVnBRjttcxXTRZjL56hKHA9S1eKU!/m/dDMBAAAAAAAAnull&bo=PgY4BNAPsAoRCV8!&rf=photolist&t=5" data-darkbox="http://b307.photo.store.qq.com/psb?/V12bJ0UM38AxIh/Iki6kk8DWosa2ilBVnBRjttcxXTRZjL56hKHA9S1eKU!/b/dDMBAAAAAAAA&bo=PgY4BNAPsAoRCV8!&rf=viewer_4&t=5" data-darkbox-description="<b>@小草</b><br>和喜欢的一切在一起" class="img-responsive slideanim">
+		<img src="http://b362.photo.store.qq.com/psbe?/V12bJ0UM1M52NQ/XVMnRPUUroLpLYuzYRxOOTXquHt9dfeftmMVQuhE.cYI8O1rn6AC8jsDQdGR06tp/m/dGoBAAAAAAAAnull&bo=VAY4BIwKCAcBCck!&rf=photolist&t=5" data-darkbox="http://b362.photo.store.qq.com/psbe?/V12bJ0UM1M52NQ/XVMnRPUUroLpLYuzYRxOOTXquHt9dfeftmMVQuhE.cYI8O1rn6AC8jsDQdGR06tp/b/dGoBAAAAAAAA&bo=VAY4BIwKCAcBCck!&rf=viewer_4&t=5" data-darkbox-description="<b>@小草</b><br>他的笙最动听， 她的笑最动情" class="img-responsive slideanim">
+		<img src="http://b398.photo.store.qq.com/psb?/V10aNMxF02Tfq9/NCPbzfblKtBD5udePU0BTlv1OprBErglN0Ur3zKz7qs!/m/dI4BAAAAAAAAnull&bo=VAY4BIAWAA8RCck!&rf=photolist&t=5" data-darkbox="http://b398.photo.store.qq.com/psb?/V10aNMxF02Tfq9/NCPbzfblKtBD5udePU0BTlv1OprBErglN0Ur3zKz7qs!/b/dI4BAAAAAAAA&bo=VAY4BIAWAA8RCck!&rf=viewer_4&t=5" data-darkbox-description="<b>@粑粑</b><br>嘘，不要惊扰了时光。" class="img-responsive slideanim">
+		<img src="http://b242.photo.store.qq.com/psb?/V10aNMxF1Uushy/ymjYoA0rb1Bf5RM.uGXjxH2f2ieMKxrgWJN*s0vrg.A!/m/dPIAAAAAAAAAnull&bo=OAQfBq4MZRIRCc4!&rf=photolist&t=5" data-darkbox="http://b242.photo.store.qq.com/psb?/V10aNMxF1Uushy/ymjYoA0rb1Bf5RM.uGXjxH2f2ieMKxrgWJN*s0vrg.A!/b/dPIAAAAAAAAA&bo=OAQfBq4MZRIRCc4!&rf=viewer_4&t=5" data-darkbox-description="<b>@粑粑</b><br>天气很冷，吸猫很暖。请享用！" class="img-responsive slideanim">
+		<img src="http://b243.photo.store.qq.com/psb?/V10aNMxF1gxxd3/r1f8tVn5ewzuHBe5ILYELh.*aZ4Y*D*pUIsYIv*dW8g!/m/dPMAAAAAAAAAnull&bo=sQU4BLwToA4RCbc!&rf=photolist&t=5" data-darkbox="http://b243.photo.store.qq.com/psb?/V10aNMxF1gxxd3/r1f8tVn5ewzuHBe5ILYELh.*aZ4Y*D*pUIsYIv*dW8g!/b/dPMAAAAAAAAA&bo=sQU4BLwToA4RCbc!&rf=viewer_4&t=5" data-darkbox-description="<b>@粑粑</b><br>生活和摄影一样，都需要做减法。反璞归真，感恩食物带来的能量和满足" class="img-responsive slideanim">
 	</div>
 </section>
 <!-- /Gallery Section -->
 <!-- Testimonials -->
 <section class="our-testimonials slideanim" id="testimonials">
-	<h3 class="text-center slideanim">What Our Clients Say</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">有意思~</h3>
+	<p class="text-center slideanim">时常网上find一些趣站，酷页；整理一些web小插件，特效啥的，版权归人家所有。交流学习使用~</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-4">
 				<div class="test">
-					<img src="images/test-img1.png" class="img-responsive slideanim" alt="">
-					<h4 class="text-center slideanim">Lorem Ipsum</h4>
-					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>	
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="test">
-					<img src="images/test-img2.png" class="img-responsive slideanim" alt="">
-					<h4 class="text-center slideanim">Lorem Ipsum</h4>
-					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>	
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="test">
-					<img src="images/test-img3.png" class="img-responsive slideanim" alt="">
+					<!-- <img src="images/test-img1.png" class="img-responsive slideanim" alt=""> -->
 					<h4 class="text-center slideanim">Lorem Ipsum</h4>
 					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>	
 				</div>
@@ -250,12 +235,12 @@ ul{
 <!-- Testimonials -->
 <!-- Contact Section -->
 <section class="our-contacts slideanim" id="contact">
-	<h3 class="text-center slideanim">Contact Us</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">日心注</h3>
+	<p class="text-center slideanim">就是啊，放在这里一些，一些话。满足咱习惯性自言自语的臭毛病。</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<form role="form">
+<!-- 				<form role="form">
 					<div class="row">
 						<div class="form-group col-lg-4 slideanim">
 							<input type="text" class="form-control user-name" placeholder="Your Name" required/>
@@ -274,7 +259,7 @@ ul{
 							<button type="submit" href="#" class="btn-outline1">Submit</button>
 						</div>
 					</div>
-				</form>
+				</form> -->
 			</div>	
 		</div>
 	</div>
@@ -287,7 +272,7 @@ ul{
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 footer-left">
-				<h4>关于如何找到这个人</h4>
+				<h4>关于如何找到这个User</h4>
 				<div class="contact-info">
 					<div class="address">	
 						<i class="glyphicon glyphicon-globe"></i>
@@ -296,18 +281,18 @@ ul{
 					</div>
 					<div class="phone">
 						<i class="glyphicon glyphicon-phone-alt"></i>
-						<p class="p3">+偶尔看一眼电话</p>
+						<p class="p3">+偶尔Look一眼Phone</p>
 						<p class="p4">+86 183-4068-9486</p>
 					</div>
 					<div class="email-info">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<p class="p3"><a href="#">在线时间短暂，且行且珍惜</a></p> 
-						<p class="p4"><a href="#">2402241449@qq.com</a></p>
+						<p class="p3">Online时间短暂，且行且珍惜</p> 
+						<p class="p4">2402241449@qq.com</p>
 					</div>
 				</div>
 			</div><!-- col -->
 			<div class="col-md-4 footer-center">
-				<h4>更新</h4>
+				<h4>经常更新</h4>
 				<p>本站属于静态站点，只有展示部分，闲来无事可点开看看。使用了很多静态页面技术和模板。</p>
 				<p>鸣谢酷站：</p>
 				<div class="col-md-6">
@@ -322,17 +307,19 @@ ul{
 					<li><a href="http://www.moulem.com/" target="_blank">某柠檬</a></li>
 					<li><a href="http://www.jq22.com/" target="_blank">JQ22</a></li>
 					<li><a href="https://cloud.baidu.com/" target="_blank">百度开放平台</a></li>
+					<li><a href="http://www.layui.com/" target="_blank">LayUI</a></li>
 				</div>
 			</div><!-- col -->
 			<div class="col-md-4 footer-right">
 				<h4>总结：</h4>
-				<p>感谢图片来自：</p>
+				<p>部分图片来自摄影师：@粑粑&nbsp;&nbsp;@小草</p>
 				<ul class="social-icons2">
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				</ul>
+					<li><a href="#" id="click_btn_1"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" id="click_btn_2"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" id="click_btn_3"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#" id="click_btn_4"><i class="fa fa-google-plus"></i></a></li>
+				</ul><br/>
+				<p>V bootstrap4.0</p>
 			</div><!-- col -->
 		</div><!-- row -->
 	</div><!-- container -->
@@ -348,6 +335,7 @@ ul{
 
 <!-- js files -->
 <script src="js/jquery.min.js"></script>
+<script src="plugin/layui/layer/layer.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/SmoothScroll.min.js"></script>
 <!-- js for gallery -->
@@ -375,7 +363,58 @@ $(document).ready(function(){
     window.location.hash = hash;
     });
   });
-})
+});
+
+//单击事件
+$("#click_btn_1").click(function(){
+	layer.open({
+		title: '你竟然点了！',
+		type: 0,		//弹窗类型:0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+		area: ['300px','200px'],
+		btn: '那好吧',
+		shadeClose: true, //点击遮罩关闭
+		//content: $('#id') /这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+		content: '唉，亲爱的，让你失望了，这里啥也没有，关了吧',
+		skin: 'layui-layer-molv'	//皮肤,允许你传入layer内置的样式class名layui-layer-lan layui-layer-molv
+	});
+});
+$("#first").click(function(){
+	layer.msg('emmm，这就是主页！');
+});
+$("#click_btn_2").click(function(){
+	layer.open({
+		title: '第二个',
+		content: '我说亲你是真的无聊么？还点！',
+		btn: '算我手贱'
+	});
+});
+$('#click_btn_3').click(function(){
+	layer.confirm('我喜欢你~', {
+    btn: ['我接受', '我同意', '将就吧'] //可以无限个按钮
+    ,title: '严肃声明！！'
+    ,icon: 6
+    ,resize :false
+    ,closeBtn: 0
+    ,btn3: function(index, layero){
+        layer.open({
+    		title: '选这个也行',
+    		content: '违心么，后悔么？',
+    		btn: '都是套路'
+    	})
+    }
+    }, function(index, layero){
+      layer.msg('请坚持你的选择！');
+    }, function(index){
+    	layer.open({
+    		title: '谢谢亲',
+    		content: '程序提交，反悔无效！',
+    		btn: '行吧'
+    	})
+  });
+});
+$("#click_btn_4").click(function(){
+	layer.msg('我无语');
+});
 </script>
 <!-- /js for nav-smooth scroll -->
 <!-- js for slide animations -->
