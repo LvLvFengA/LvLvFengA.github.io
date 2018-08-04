@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.00">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800624">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="绘制线条和形状">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画一条直线 ">
+			<param name="Local" value="paint_lines.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画一条自由形式的线 ">
+			<param name="Local" value="paint_freeform_lines.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画一条曲线">
+			<param name="Local" value="paint_curves.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画椭圆或圆 ">
+			<param name="Local" value="paint_ovals.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画矩形或正方形 ">
+			<param name="Local" value="paint_rectangles.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="绘制多边形 ">
+			<param name="Local" value="paint_polygons.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="把文字放到图片中">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="类型和格式文本 ">
+			<param name="Local" value="paint_text.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="色彩加工">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="设置默认的前景和背景颜色">
+			<param name="Local" value="paint_set_default_colors.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="用颜色填充区域 ">
+			<param name="Local" value="paint_fill.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="用画笔画画 ">
+			<param name="Local" value="paint_brush.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="创建喷枪效果 ">
+			<param name="Local" value="paint_airbrush.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="创建自定义颜色 ">
+			<param name="Local" value="paint_custom_colors.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="用黑白代替颜色 ">
+			<param name="Local" value="paint_blackwhite.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="反转图片中的所有颜色 ">
+			<param name="Local" value="paint_invert.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="更改现有行的颜色 ">
+			<param name="Local" value="paint_change_color.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="将颜色从一个区域或对象复制到另一个区域或对象 ">
+			<param name="Local" value="paint_not_in_color_box.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="擦除">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="擦除小面积">
+			<param name="Local" value="paint_erase_small.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="擦除大面积">
+			<param name="Local" value="paint_erase_large.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="擦除整个图像">
+			<param name="Local" value="paint_clear_image.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="撤消更改 ">
+			<param name="Local" value="paint_undo.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="与部分图片一起工作">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="选择图片的一部分 ">
+			<param name="Local" value="paint_cutout_select.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="复制并粘贴图片的一部分">
+			<param name="Local" value="paint_cutout_copy_move.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="将图片的一部分保存到位图文件中 ">
+			<param name="Local" value="paint_cutout_save.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="改变你的图片在屏幕上的样子">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="改变图片的大小">
+			<param name="Local" value="paint_change_size.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="放大或缩小 ">
+			<param name="Local" value="paint_zoom.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="扩大观看区域的面积">
+			<param name="Local" value="paint_enlarge_area.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="显示网格线 ">
+			<param name="Local" value="paint_grid.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="翻转或旋转图片 ">
+			<param name="Local" value="paint_flip_picture.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="拉伸或歪斜一个项目">
+			<param name="Local" value="paint_skew_picture.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="印刷">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="打印图片 ">
+			<param name="Local" value="paint_print.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="与其他程序一起使用油漆">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="在当前图片中插入位图文件">
+			<param name="Local" value="paint_insert_file.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="提示和技巧">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="使用图片作为桌面背景 ">
+			<param name="Local" value="paint_wallpaper.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="显示工具箱">
+			<param name="Local" value="paint_toolbox.html">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
