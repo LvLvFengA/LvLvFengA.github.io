@@ -71,7 +71,7 @@ http://www.cssmoban.com/tm-488-classic
 
         <div class="tm-blog-img-container">
             <!-- banner图片 -->
-            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533715900619&di=1ba02070565460ee8fa98d6082833b27&imgtype=0&src=http%3A%2F%2Fwww.cqnenya.com%2FUploads%2Fattach%2Fimage%2F20160409%2F5708b1ee4233e.jpg" width="100%" height="260">
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533741511745&di=8c6931db1be7c646c659cc35b8557260&imgtype=0&src=http%3A%2F%2Fp7.qhimg.com%2Ft01257bd644c21ffa2d.png" width="100%" height="260">
         </div>
 
         <section class="tm-section">
@@ -79,32 +79,37 @@ http://www.cssmoban.com/tm-488-classic
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
                         <div class="tm-blog-post">
-                            <h3 class="tm-gold-text">代码高亮插件HighLight的使用心得</h3>
-                            <p>日常在代码显示和在html中展现的时候，常常会因为格式造成可读性一般。因此，出来了它。</p>
-                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533740798631&di=0eeac759e43045bf09312957e888b439&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F1ad5ad6eddc451da02496daeb7fd5266d0163233.jpg" alt="代码" class="img-fluid tm-img-post">
-                            <p>上图，引用自百度；一个最棒的笔记本“sublime”的样式</p><hr>
-                            <p>首先，我们需要在html文档中引入下面这样的文件：先下载好，右侧目录有链接</p>
-                            <pre><code>    &lt;head&gt;
-        &lt;title&gt;高亮&lt;/title&gt;
-        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
-        &lt;!-- 样式表可以根据自己喜好配置 --&gt;
-        &lt;link rel="stylesheet" href="styles/default.css"&gt;
-        &lt;!-- 主JS文件 --&gt;
-        &lt;script src="highlight.pack.js"&gt;&lt;/script&gt;
-        &lt;script&gt;hljs.initHighlightingOnLoad();  //初始化&lt;/script&gt;
-    &lt;/head&gt;</code></pre>
-                            <p>当然，这个例子就是这样做的~</p>
-                            <p>加了一个可爱萌萌哒圆角</p>
+                            <h3 class="tm-gold-text">MySQL问题总结（一）</h3>
+                            <p>MySQL在一些时候，十分的坑。它会爆出各种问题。就算手动安装，在win10环境下，最后一步execute也会卡到疯狂。于是，咱家就选择手动安装配置mysql。这是咱家遇到的各种疑难，总结如下：</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzea1y6zhdgiaV8d13DXOMZibyFRRg1bLqVLLEKMKyqffjVVA5sicqfZj0kA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>1.解压安装文件，拷贝到C盘；使用管理员身份运行cmd，使用指令dir查看目录并使用cd一步一步进入到mysql的bin目录；执行mysqld -stall开始安装mysql服务到Windows；在使用指令net start mysql启动服务进程。然后……出现了错误1067。无奈只能使用指令mysqld -remove移除mysql服务，并在此使用mysqld --initialize --user=mysql --console进行初始化操作。这时，mysql会清空配置，此时要将动态生成的密码保存起来。初始化之后，再次安装服务，尝试启动，登录……</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzemo9Ngaj31C6yexerH9tk4aKJ07zpV7afibuACtydiaFSKDQiaWDj8CHpA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>2.竟然权限不够！咱家就使用指令net stop mysql关掉服务，然后，我们打开mysql安装目录，在my.ini的配置文件里加上[mysqld]并在它的下面添加skip-grant-tables，保存。再次启动服务，登录，输入密码，成功！</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzecwrsKfbBAqMic26tp6zx9OMDn4gVXcy4YEBib1B2MzQQE4iaetM4f9Jrg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>3.然后我们改一下密码吧，复杂的不好记住~使用以前的语句更新密码update mysql.user set password=password('新密码') where user='root' and host='localhost';回车执行。竟然不对！最后挨个show了一下，原来，mysql6.0以后，保存密码的表名有更改，具体如下update mysql.user set authentication_string=password('新密码') where user='root' and host='localhost';如图，搞定！</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzehg1eVibKiaG5aTHP8ATUCPYf8s20nqWusK6dsIArXw13qXw5Uk7057Eg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>4.如图，总结一下，mysql安装比较麻烦，解压缩版本的安装，可能有的版本需要自己创建配置文件，如图，咱就是。在根目录创建my.ini文件【有这个文件就不用创建，直接改就好了】如图，一般只需要这些配置。顺带追加一个环境变量到bin目录，以后就可以方便的在命令行使用数据库了！<br><hr>
+
+纯纯的技术干货，大多数小伙伴可能比较蒙圈……当然，本文顺带着教大家一个电脑使用的小技巧：如下<br>
+
+  A.咱们总觉得电脑垃圾很多，却又不知道在哪。幸亏小编电脑的一些软件出了些故障，导致硬盘空间下降很快，于是，顺藤摸瓜，找到了缓存路径【软件运行时产生的一些文件】，更改了一下目录，然后时刻监督他们，如图，在我的电脑上右键》更多》属性。</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWze0IA1icPKWkHrToBy1DjsSzmewgVDe759055Kgxtepk4ZdoA4aibC3onw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>B.高级系统设置》高级》环境变量》如图，我们会看到有用户变量和系统变量。当用户登录电脑的时候，双击Windows的应用程序就会在用户变量下面的temp文件夹缓存文件【默认目录不是这个，您需要自己手动新建文件夹，然后更改他们的路径，重启计算机生效】而后，时常看看这些文件夹，在所有程序关闭之后，如果仍然有文件，那么绝大多数是垃圾文件了。将文件名复制到百度搜索，看看是啥程序所创建，然后就干掉它们，你的电脑会轻松一些~</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzeImLZ1aCFQ86r4dKE3ic8VbhxCD6PIxgNX7Mr2KCRBe4xor4l8ZSricibA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>C.啥？很难没懂？就是更改上图框框圈起来的值value，改成你自己设置的文件夹目录。监督临时文件。看下图，一天时间里，一些程序默默地创建了上百个临时文件，看起来炒鸡不爽。当然，我会在电脑使用完成之后【关掉所有程序之后】，一股脑删掉它们~</p>
+                            <img src="https://mmbiz.qpic.cn/mmbiz_png/peBOMyPyUFZlRv5s0DgOAoDNDDcVIWzeBc0ZOO0T6gqQConTazzcoO8NEeZaBXE0JrlcwwwnTw5FQicibCFGiaUmw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt="代码" class="img-fluid tm-img-post"><hr>
+                            <p>简单方便不墨迹。</p>
+                            <p>引自自己公众号“绿绿峰”，点击右侧链接查看原文吧！</p>
                         </div>
                         
                         <div class="row tm-margin-t-big">
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 
                                 <div class="tm-content-box">
-                                    <img src="../file/image/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
-                                    <h4 class="tm-margin-b-20 tm-gold-text">文章 #1</h4>
-                                    <p class="tm-margin-b-20">描述</p>
-                                    <a href="#" class="tm-btn text-uppercase">详情</a>    
+                                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533740798631&di=0eeac759e43045bf09312957e888b439&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F1ad5ad6eddc451da02496daeb7fd5266d0163233.jpg" alt="Image" class="tm-margin-b-30 img-fluid">
+                                    <h4 class="tm-margin-b-20 tm-gold-text">代码高亮插件</h4>
+                                    <p class="tm-margin-b-20">日常在代码显示和在html中展现的时候用到~</p>
+                                    <a href="te_blog_1.html" class="tm-btn text-uppercase">详情</a>    
                                 </div>  
 
                             </div>
@@ -138,13 +143,11 @@ http://www.cssmoban.com/tm-488-classic
 
                         <div class="tm-aside-container">
                             <h3 class="tm-gold-text tm-title">
-                                代码高亮插件下载地址
+                                文章来源
                             </h3>
                             <nav>
                                 <ul class="nav">
-                                    <li><a href="https://highlightjs.org/download/" target="_blank" class="tm-text-link">HightLight Download</a></li>
-                                    <li><a href="https://highlightjs.org/" target="_blank" class="tm-text-link">官网简介</a></li>
-                                   
+                                    <li><a href="https://mp.weixin.qq.com/s?__biz=MzI3OTk1OTY2MQ==&mid=2247484609&idx=1&sn=792917eef25dab52aef8aa151120b2ba&chksm=ebbe85c3dcc90cd5f0fe5f0d07241d89abebac58a76687f39e965ece3f1f74eab73f32d665e9#rd" target="_blank" class="tm-text-link">MySQL各种问题</a></li>
                                 </ul>
                             </nav>
 <!--                             <hr class="tm-margin-t-small">   
@@ -171,7 +174,6 @@ http://www.cssmoban.com/tm-488-classic
                             </div>   -->     
                         </div>
                         
-                        
                     </aside>
 
                 </div>
@@ -186,10 +188,10 @@ http://www.cssmoban.com/tm-488-classic
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                         
                         <div class="tm-footer-content-box">
-                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">HighLight</h3>
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">MySQL</h3>
                             <div class="tm-gray-bg">
-                                <p>展示你的代码</p>
-                                <p>显得高大上~</p>
+                                <p>使用比较多的一种数据库</p>
+                                <p>简单轻便</p>
                                 <p><strong>LvLvFeng</strong></p>    
                             </div>    
                         </div>
@@ -202,8 +204,9 @@ http://www.cssmoban.com/tm-488-classic
                             <h3 class="tm-gold-text tm-title tm-footer-content-box-title">友情链接</h3>
                             <nav>
                                 <ul class="nav">
-                                    <li><a href="https://blog.csdn.net/u012906135/article/details/51605365" class="tm-footer-link" target="_blank">CSDN上简介</a></li>
-                                    <li><a href="https://www.baidu.com" target="_blank" class="tm-footer-link">不会则百度一下吧</a></li>
+                                    <li><a href="https://www.mysql.com/" target="_blank" class="tm-footer-link">MySQL官网</a></li>
+                                    <li><a href="https://baike.baidu.com/item/mySQL/471251?fr=aladdin" target="_blank" class="tm-footer-link">百度百科的介绍</a></li>
+                                    <li><a href="https://github.com/LvLvFengA/Note/tree/master/db/mysql" target="_blank" class="tm-footer-link">小编MySQL笔记</a></li>
                                 </ul>
                             </nav>
 
@@ -222,10 +225,11 @@ http://www.cssmoban.com/tm-488-classic
                         
                             <h3 class="tm-gold-text tm-title tm-footer-content-box-title">援引文章</h3>
                             <p class="tm-margin-b-30">
-                                <a href="https://www.cnblogs.com/ermu-learn/p/5993025.html" class="tm-footer-link" target="_blank">博客园——高亮你的代码</a>
-                            </p>
-                            <p class="tm-margin-b-30"><a href="https://www.cnblogs.com/moqiutao/p/6541089.html" class="tm-footer-link" target="_blank">博客园——高亮你的代码2</a></p>
-                            <!-- <a href="#" class="tm-btn tm-btn-gray text-uppercase">查看更多</a> -->
+                                <a href="https://www.cnblogs.com/programmer-tlh/p/5782418.html" target="_blank">博客园——MySQL详解</a></p>
+                                <!-- <hr class="tm-margin-b-30"> -->
+                            <p class="tm-margin-b-30">
+                                <a href="https://www.2cto.com/database/MySQL/" target="_blank">红黑联盟——MySQL</a></p>
+                            <a href="https://www.baidu.com" class="tm-btn tm-btn-gray text-uppercase" target="_blank">百度上查看更多</a>
 
                         </div>
                         
@@ -241,7 +245,7 @@ http://www.cssmoban.com/tm-488-classic
                                 <!-- <img src="../file/image/tm-img-100x100-2.jpg" alt="Image" class="tm-footer-thumbnail"> -->
                             </div>
                             <p class="tm-margin-b-20">戳下面下载</p>
-                            <a href="https://highlightjs.org/" target="_blank" class="tm-btn tm-btn-gray text-uppercase">下载本插件</a>
+                            <a href="https://dev.mysql.com/downloads/" target="_blank" class="tm-btn tm-btn-gray text-uppercase">下载MySQL</a>
 
                         </div>
                         
